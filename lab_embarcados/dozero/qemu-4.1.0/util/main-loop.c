@@ -487,6 +487,7 @@ void main_loop_poll_remove_notifier(Notifier *notify)
 
 void main_loop_wait(int nonblocking)
 {
+    qemu_log("\n*********\nBeginning main_loop_wait\n*********\n");
     MainLoopPoll mlpoll = {
         .state = MAIN_LOOP_POLL_FILL,
         .timeout = UINT32_MAX,
